@@ -8,7 +8,7 @@ VENV ?= .venv
 BIN := $(VENV)/bin
 BACKEND := backend
 FRONTEND := frontend
-export PYTHONPATH := $(BACKEND)
+export PYTHONPATH := $(CURDIR)/$(BACKEND)
 
 .PHONY: setup dev test lint seed pipeline-once help
 
