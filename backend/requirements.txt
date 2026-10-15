@@ -1,0 +1,30 @@
+# Drishti backend (Python 3.11+).
+# Render installs this file from Root Directory = backend/.
+# Intentionally omitted (too heavy for free-tier): torch, sentence-transformers, spaCy.
+
+# --- API ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.5
+pydantic-settings==2.7.1
+
+# --- Database ---
+SQLAlchemy==2.0.36
+alembic==1.14.1
+psycopg[binary]==3.2.4
+
+# --- Pipeline / ingest ---
+requests==2.32.3
+feedparser==6.0.11
+pandas==2.2.3
+scikit-learn==1.6.1
+rapidfuzz==3.13.0
+PyYAML==6.0.2
+tenacity==9.0.0
+python-dotenv==1.0.1
+
+# --- Tests / lint ---
+pytest==8.3.4
+httpx==0.28.1
+ruff==0.8.6
+pre-commit==4.0.1

@@ -1,0 +1,25 @@
+# Local git hooks. Install with: pre-commit install
+# CI also runs ruff via .github/workflows/tests.yml (added in a later step).
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ["--maxkb=500"]
+      - id: check-merge-conflict
+      - id: detect-private-key
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.6
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+        files: ^backend/
+        exclude: ^backend/db/migrations/versions/
+      - id: ruff-format
+        files: ^backend/
+        exclude: ^backend/db/migrations/versions/
