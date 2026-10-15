@@ -1,0 +1,203 @@
+# RSS URLs are left empty until Step 3 live-verifies each official feed.
+# Seed still inserts the rows (is_active: false) so adapters can flip them later.
+# GDELT DOC 2.0 URL is the official endpoint named in the product spec.
+sources:
+  - id: gdelt_doc
+    name: GDELT DOC 2.0
+    kind: gdelt
+    url: https://api.gdeltproject.org/api/v2/doc/doc
+    country_iso: null
+    language: en
+    source_type: aggregator
+    is_active: true
+
+  - id: youtube_stub
+    name: YouTube commentary (stub)
+    kind: youtube
+    url: null
+    country_iso: null
+    language: en
+    source_type: commentary
+    is_active: false
+
+  # India
+  - id: the_hindu
+    name: The Hindu
+    kind: rss
+    url: null
+    country_iso: IN
+    language: en
+    source_type: independent
+    is_active: false
+  - id: times_of_india
+    name: Times of India
+    kind: rss
+    url: null
+    country_iso: IN
+    language: en
+    source_type: independent
+    is_active: false
+  - id: indian_express
+    name: Indian Express
+    kind: rss
+    url: null
+    country_iso: IN
+    language: en
+    source_type: independent
+    is_active: false
+  - id: ndtv
+    name: NDTV
+    kind: rss
+    url: null
+    country_iso: IN
+    language: en
+    source_type: independent
+    is_active: false
+  - id: hindustan_times
+    name: Hindustan Times
+    kind: rss
+    url: null
+    country_iso: IN
+    language: en
+    source_type: independent
+    is_active: false
+
+  # International
+  - id: bbc_world
+    name: BBC World
+    kind: rss
+    url: null
+    country_iso: GB
+    language: en
+    source_type: independent
+    is_active: false
+  - id: al_jazeera_english
+    name: Al Jazeera English
+    kind: rss
+    url: null
+    country_iso: QA
+    language: en
+    source_type: independent
+    is_active: false
+  - id: dw
+    name: Deutsche Welle
+    kind: rss
+    url: null
+    country_iso: DE
+    language: en
+    source_type: independent
+    is_active: false
+  - id: guardian_world
+    name: The Guardian World
+    kind: rss
+    url: null
+    country_iso: GB
+    language: en
+    source_type: independent
+    is_active: false
+
+  # United States
+  - id: npr
+    name: NPR
+    kind: rss
+    url: null
+    country_iso: US
+    language: en
+    source_type: independent
+    is_active: false
+  - id: ap_news
+    name: Associated Press
+    kind: rss
+    url: null
+    country_iso: US
+    language: en
+    source_type: independent
+    is_active: false
+
+  # EU
+  - id: france24_en
+    name: France 24 English
+    kind: rss
+    url: null
+    country_iso: FR
+    language: en
+    source_type: independent
+    is_active: false
+  - id: euronews
+    name: Euronews
+    kind: rss
+    url: null
+    country_iso: FR
+    language: en
+    source_type: independent
+    is_active: false
+
+  # Russia (state-affiliated)
+  - id: tass_en
+    name: TASS English
+    kind: rss
+    url: null
+    country_iso: RU
+    language: en
+    source_type: state_affiliated
+    is_active: false
+  - id: rt_en
+    name: RT
+    kind: rss
+    url: null
+    country_iso: RU
+    language: en
+    source_type: state_affiliated
+    is_active: false
+
+  # China (state-affiliated)
+  - id: xinhua_en
+    name: Xinhua English
+    kind: rss
+    url: null
+    country_iso: CN
+    language: en
+    source_type: state_affiliated
+    is_active: false
+  - id: cgtn
+    name: CGTN
+    kind: rss
+    url: null
+    country_iso: CN
+    language: en
+    source_type: state_affiliated
+    is_active: false
+
+  # Asia (feeds verified in Step 3; inactive until then)
+  - id: straits_times
+    name: Straits Times
+    kind: rss
+    url: null
+    country_iso: SG
+    language: en
+    source_type: independent
+    is_active: false
+  - id: japan_times
+    name: Japan Times
+    kind: rss
+    url: null
+    country_iso: JP
+    language: en
+    source_type: independent
+    is_active: false
+  - id: scmp
+    name: South China Morning Post
+    kind: rss
+    url: null
+    country_iso: HK
+    language: en
+    source_type: independent
+    is_active: false
+  - id: dawn
+    name: Dawn
+    kind: rss
+    url: null
+    country_iso: PK
+    language: en
+    source_type: independent
+    is_active: false

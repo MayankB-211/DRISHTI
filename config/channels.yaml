@@ -1,0 +1,8 @@
+# YouTube extension point. Empty until a future step enables video commentary.
+# Each item would look like:
+#   - id: example
+#     title: Example channel
+#     url: https://www.youtube.com/@example
+#     region_id: world
+#     is_active: false
+channels: []

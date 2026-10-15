@@ -1,0 +1,401 @@
+# Hierarchical regions. Adding a region = adding a YAML entry, then re-running seed.
+# GDELT DOC country filters use FIPS 10-4 codes (gdelt_code), not ISO 3166-1 (iso_code).
+# level: world | continent | bloc | country | state
+# `state` is reserved for a future Indian-state scope; none are seeded now.
+#
+# keywords: gazetteer terms for the geotag stage (country names, demonyms, capitals, major cities).
+
+regions:
+  - id: world
+    name: World
+    level: world
+    iso_code: null
+    gdelt_code: null
+    lat: 20.0
+    lon: 0.0
+    is_active: true
+    keywords: [world, global, international]
+    children:
+      - id: asia
+        name: Asia
+        level: continent
+        iso_code: null
+        gdelt_code: null
+        lat: 29.0
+        lon: 90.0
+        is_active: true
+        keywords: [Asia, Asian]
+        children:
+          - id: india
+            name: India
+            level: country
+            iso_code: IN
+            gdelt_code: IN
+            lat: 21.15
+            lon: 79.09
+            is_active: true
+            keywords: [India, Indian, Bharat, Delhi, New Delhi, Mumbai, Bombay, Kolkata, Calcutta, Chennai, Madras, Bengaluru, Bangalore, Hyderabad, Pune, Ahmedabad, Jaipur, Lucknow, Kashmir, Punjab]
+          - id: china
+            name: China
+            level: country
+            iso_code: CN
+            gdelt_code: CH
+            lat: 35.86
+            lon: 104.20
+            is_active: true
+            keywords: [China, Chinese, Beijing, Shanghai, Shenzhen, Guangzhou, Wuhan, Chengdu, Chongqing, Tianjin, Xi'an, Hong Kong, Tibet, Xinjiang]
+          - id: japan
+            name: Japan
+            level: country
+            iso_code: JP
+            gdelt_code: JA
+            lat: 36.20
+            lon: 138.25
+            is_active: true
+            keywords: [Japan, Japanese, Tokyo, Osaka, Kyoto, Yokohama, Nagoya, Fukuoka, Sapporo, Hiroshima]
+          - id: south_korea
+            name: South Korea
+            level: country
+            iso_code: KR
+            gdelt_code: KS
+            lat: 35.91
+            lon: 127.77
+            is_active: true
+            keywords: [South Korea, Korean, Republic of Korea, Seoul, Busan, Incheon, Daegu, Gwangju]
+          - id: pakistan
+            name: Pakistan
+            level: country
+            iso_code: PK
+            gdelt_code: PK
+            lat: 30.38
+            lon: 69.35
+            is_active: true
+            keywords: [Pakistan, Pakistani, Islamabad, Karachi, Lahore, Peshawar, Quetta, Rawalpindi]
+          - id: bangladesh
+            name: Bangladesh
+            level: country
+            iso_code: BD
+            gdelt_code: BG
+            lat: 23.68
+            lon: 90.36
+            is_active: true
+            keywords: [Bangladesh, Bangladeshi, Dhaka, Chittagong, Khulna, Sylhet]
+          - id: sri_lanka
+            name: Sri Lanka
+            level: country
+            iso_code: LK
+            gdelt_code: CE
+            lat: 7.87
+            lon: 80.77
+            is_active: true
+            keywords: [Sri Lanka, Sri Lankan, Colombo, Kandy, Jaffna, Galle]
+          - id: nepal
+            name: Nepal
+            level: country
+            iso_code: NP
+            gdelt_code: NP
+            lat: 28.39
+            lon: 84.12
+            is_active: true
+            keywords: [Nepal, Nepali, Nepalese, Kathmandu, Pokhara]
+          - id: indonesia
+            name: Indonesia
+            level: country
+            iso_code: ID
+            gdelt_code: ID
+            lat: -0.79
+            lon: 113.92
+            is_active: true
+            keywords: [Indonesia, Indonesian, Jakarta, Surabaya, Bandung, Medan, Bali, Denpasar]
+          - id: singapore
+            name: Singapore
+            level: country
+            iso_code: SG
+            gdelt_code: SN
+            lat: 1.35
+            lon: 103.82
+            is_active: true
+            keywords: [Singapore, Singaporean]
+          - id: asia_others
+            name: Rest of Asia
+            level: country
+            iso_code: null
+            gdelt_code: null
+            lat: 20.0
+            lon: 100.0
+            is_active: true
+            keywords: [Thailand, Vietnam, Malaysia, Philippines, Myanmar, Cambodia, Laos, Mongolia, Taiwan]
+
+      - id: united_states
+        name: United States
+        level: country
+        iso_code: US
+        gdelt_code: US
+        lat: 39.83
+        lon: -98.58
+        is_active: true
+        keywords: [United States, USA, US, American, Washington, New York, Los Angeles, Chicago, Houston, Boston, San Francisco, Seattle, Miami]
+
+      - id: european_union
+        name: European Union
+        level: bloc
+        iso_code: EU
+        gdelt_code: null
+        lat: 50.0
+        lon: 10.0
+        is_active: true
+        keywords: [European Union, EU, Brussels, Europe, European]
+        children:
+          - id: austria
+            name: Austria
+            level: country
+            iso_code: AT
+            gdelt_code: AU
+            lat: 47.52
+            lon: 14.55
+            is_active: true
+            keywords: [Austria, Austrian, Vienna]
+          - id: belgium
+            name: Belgium
+            level: country
+            iso_code: BE
+            gdelt_code: BE
+            lat: 50.50
+            lon: 4.47
+            is_active: true
+            keywords: [Belgium, Belgian, Brussels, Antwerp]
+          - id: bulgaria
+            name: Bulgaria
+            level: country
+            iso_code: BG
+            gdelt_code: BU
+            lat: 42.73
+            lon: 25.49
+            is_active: true
+            keywords: [Bulgaria, Bulgarian, Sofia]
+          - id: croatia
+            name: Croatia
+            level: country
+            iso_code: HR
+            gdelt_code: HR
+            lat: 45.10
+            lon: 15.20
+            is_active: true
+            keywords: [Croatia, Croatian, Zagreb]
+          - id: cyprus
+            name: Cyprus
+            level: country
+            iso_code: CY
+            gdelt_code: CY
+            lat: 35.13
+            lon: 33.43
+            is_active: true
+            keywords: [Cyprus, Cypriot, Nicosia]
+          - id: czechia
+            name: Czechia
+            level: country
+            iso_code: CZ
+            gdelt_code: EZ
+            lat: 49.82
+            lon: 15.47
+            is_active: true
+            keywords: [Czechia, Czech Republic, Czech, Prague]
+          - id: denmark
+            name: Denmark
+            level: country
+            iso_code: DK
+            gdelt_code: DA
+            lat: 56.26
+            lon: 9.50
+            is_active: true
+            keywords: [Denmark, Danish, Copenhagen]
+          - id: estonia
+            name: Estonia
+            level: country
+            iso_code: EE
+            gdelt_code: EN
+            lat: 58.60
+            lon: 25.01
+            is_active: true
+            keywords: [Estonia, Estonian, Tallinn]
+          - id: finland
+            name: Finland
+            level: country
+            iso_code: FI
+            gdelt_code: FI
+            lat: 61.92
+            lon: 25.75
+            is_active: true
+            keywords: [Finland, Finnish, Helsinki]
+          - id: france
+            name: France
+            level: country
+            iso_code: FR
+            gdelt_code: FR
+            lat: 46.23
+            lon: 2.21
+            is_active: true
+            keywords: [France, French, Paris, Lyon, Marseille]
+          - id: germany
+            name: Germany
+            level: country
+            iso_code: DE
+            gdelt_code: GM
+            lat: 51.17
+            lon: 10.45
+            is_active: true
+            keywords: [Germany, German, Berlin, Munich, Hamburg, Frankfurt]
+          - id: greece
+            name: Greece
+            level: country
+            iso_code: GR
+            gdelt_code: GR
+            lat: 39.07
+            lon: 21.82
+            is_active: true
+            keywords: [Greece, Greek, Athens, Thessaloniki]
+          - id: hungary
+            name: Hungary
+            level: country
+            iso_code: HU
+            gdelt_code: HU
+            lat: 47.16
+            lon: 19.50
+            is_active: true
+            keywords: [Hungary, Hungarian, Budapest]
+          - id: ireland
+            name: Ireland
+            level: country
+            iso_code: IE
+            gdelt_code: EI
+            lat: 53.14
+            lon: -7.69
+            is_active: true
+            keywords: [Ireland, Irish, Dublin]
+          - id: italy
+            name: Italy
+            level: country
+            iso_code: IT
+            gdelt_code: IT
+            lat: 41.87
+            lon: 12.57
+            is_active: true
+            keywords: [Italy, Italian, Rome, Milan, Naples, Turin]
+          - id: latvia
+            name: Latvia
+            level: country
+            iso_code: LV
+            gdelt_code: LG
+            lat: 56.88
+            lon: 24.60
+            is_active: true
+            keywords: [Latvia, Latvian, Riga]
+          - id: lithuania
+            name: Lithuania
+            level: country
+            iso_code: LT
+            gdelt_code: LH
+            lat: 55.17
+            lon: 23.88
+            is_active: true
+            keywords: [Lithuania, Lithuanian, Vilnius]
+          - id: luxembourg
+            name: Luxembourg
+            level: country
+            iso_code: LU
+            gdelt_code: LU
+            lat: 49.82
+            lon: 6.13
+            is_active: true
+            keywords: [Luxembourg]
+          - id: malta
+            name: Malta
+            level: country
+            iso_code: MT
+            gdelt_code: MT
+            lat: 35.94
+            lon: 14.38
+            is_active: true
+            keywords: [Malta, Maltese, Valletta]
+          - id: netherlands
+            name: Netherlands
+            level: country
+            iso_code: NL
+            gdelt_code: NL
+            lat: 52.13
+            lon: 5.29
+            is_active: true
+            keywords: [Netherlands, Dutch, Amsterdam, Rotterdam, The Hague]
+          - id: poland
+            name: Poland
+            level: country
+            iso_code: PL
+            gdelt_code: PL
+            lat: 51.92
+            lon: 19.15
+            is_active: true
+            keywords: [Poland, Polish, Warsaw, Krakow, Gdansk]
+          - id: portugal
+            name: Portugal
+            level: country
+            iso_code: PT
+            gdelt_code: PO
+            lat: 39.40
+            lon: -8.22
+            is_active: true
+            keywords: [Portugal, Portuguese, Lisbon, Porto]
+          - id: romania
+            name: Romania
+            level: country
+            iso_code: RO
+            gdelt_code: RO
+            lat: 45.94
+            lon: 24.97
+            is_active: true
+            keywords: [Romania, Romanian, Bucharest]
+          - id: slovakia
+            name: Slovakia
+            level: country
+            iso_code: SK
+            gdelt_code: LO
+            lat: 48.67
+            lon: 19.70
+            is_active: true
+            keywords: [Slovakia, Slovak, Bratislava]
+          - id: slovenia
+            name: Slovenia
+            level: country
+            iso_code: SI
+            gdelt_code: SI
+            lat: 46.15
+            lon: 14.99
+            is_active: true
+            keywords: [Slovenia, Slovenian, Ljubljana]
+          - id: spain
+            name: Spain
+            level: country
+            iso_code: ES
+            gdelt_code: SP
+            lat: 40.46
+            lon: -3.75
+            is_active: true
+            keywords: [Spain, Spanish, Madrid, Barcelona, Valencia, Seville]
+          - id: sweden
+            name: Sweden
+            level: country
+            iso_code: SE
+            gdelt_code: SW
+            lat: 60.13
+            lon: 18.64
+            is_active: true
+            keywords: [Sweden, Swedish, Stockholm, Gothenburg]
+
+      - id: russia
+        name: Russia
+        level: country
+        iso_code: RU
+        gdelt_code: RS
+        lat: 61.52
+        lon: 105.32
+        is_active: true
+        keywords: [Russia, Russian, Moscow, Saint Petersburg, St Petersburg]

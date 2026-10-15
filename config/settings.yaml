@@ -1,0 +1,36 @@
+# Scoring / pipeline knobs. Changing score_version starts a new stats series.
+score_version: score_v1
+
+retention:
+  raw_articles_days: 14
+
+dedup:
+  # rapidfuzz token_sort_ratio; compared within the rolling window.
+  title_similarity_threshold: 90
+  window_hours: 48
+
+cluster:
+  window_hours: 48
+  min_df: 2
+  # Cosine distance cutoff for agglomerative clustering of TF-IDF title vectors.
+  distance_threshold: 0.55
+
+score_v1:
+  smoothing: 1.0
+  baseline_days_min: 7
+  baseline_days_max: 14
+  diversity_weight: 0.25
+  recency_weight: 0.10
+  state_affiliated_penalty: 0.15
+
+heat:
+  # If we have fewer than this many days of history, return insufficient history.
+  min_history_days: 7
+  baseline_days: 14
+
+pipeline:
+  user_agent: "DrishtiBot/0.1 portfolio project"
+  request_delay_seconds: 1.0
+  gdelt_max_requests_per_run: 40
+  gdelt_active: true
+  rss_fallback_on_gdelt_failure: true
